@@ -13,30 +13,25 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ## Preambulo
-Esta presentación fue elaborada con **rmarkdown_2.1** y compilada con **knitr_1.28** en **RStudio Desktop 1.2.5033 "Orange Blossom"**.
+Este documento fue elaborado con **rmarkdown_2.1** y compilado con **knitr_1.28** en **RStudio Desktop 1.2.5033 "Orange Blossom"**.
 
 ## Instalando R {.tabset}
-Puedes escoger entre instalar **R 3.6** ó **R 4.0**.
-
 ### R 3.6
 
-Descarga el siguiente archivo y desde el directorio en el que se encuentre ejecuta:
-
-bash -v ./instalar-r3.sh
-# CREAR UN REPO PUBLICO CON UNA GITHUB PAGE QUE PERMITA DESCARGAR ESTOS SCRIPT
+sudo printf "# Repositorio R 3.6 Ubuntu Bionic\ndeb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/" >> /etc/apt/sources.list
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+sudo apt-get update
+sudo apt-get install r-base r-base-dev
 
 
 ### R 4.0
 
-Descarga el siguiente archivo y desde el directorio en el que se encuentre ejecuta:
-bash -v ./instalar-r4.sh
-
-
+sudo printf "# Repositorio R 4.0 Ubuntu Bionic\ndeb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran40/" >> /etc/apt/sources.list
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+sudo apt-get update
+sudo apt-get install r-base r-base-dev
 
 ## Instalando RStudio
-
-
-
 Descarga el siguiente archivo y desde el directorio en el que se encuentre ejecuta:
 bash ./instalar-rstudio.sh
 
