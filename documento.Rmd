@@ -15,23 +15,38 @@ knitr::opts_chunk$set(echo = FALSE)
 ## Preambulo
 Este documento fue elaborado con **rmarkdown_2.1** y compilado con **knitr_1.28** en **RStudio Desktop 1.2.5033 "Orange Blossom"**.
 
+## Introducción
+Si acabas de instalar Ubuntu y necesitas tener listo RStudio para comenzar a trabajar, echale un ojo a esta pequeña guía para que no des tantas vueltas en la web :heart:.
+
 ## Instalando R {.tabset}
 ### R 3.6
 
-sudo printf "# Repositorio R 3.6 Ubuntu Bionic\ndeb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/" >> /etc/apt/sources.list
+```bash
+# Puedes omitir la primera linea si lo deseas
+sudo printf "# Repositorio R 3.6 Ubuntu Bionic" >> /etc/apt/sources.list
+sudo printf "deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/" >> /etc/apt/sources.list
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
 sudo apt-get update
 sudo apt-get install r-base r-base-dev
+```
 
 
 ### R 4.0
 
-sudo printf "# Repositorio R 4.0 Ubuntu Bionic\ndeb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran40/" >> /etc/apt/sources.list
+```bash
+# Puedes omitir la primera linea si lo deseas
+sudo printf "# Repositorio R 4.0 Ubuntu Bionic" >> /etc/apt/sources.list 
+sudo printf "deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran40/" >> /etc/apt/sources.list
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
 sudo apt-get update
 sudo apt-get install r-base r-base-dev
+```
 
 ## Instalando RStudio
-Descarga el siguiente archivo y desde el directorio en el que se encuentre ejecuta:
-bash ./instalar-rstudio.sh
+Las siguientes lineas de código instalaran RStudio .... .... en tu OS.
+
+```bash
+curl -O ~/Downloads/rstudio url
+sudo dpkg -i ~/Downloads/rstuidio url
+```
 
