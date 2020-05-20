@@ -15,8 +15,10 @@ knitr::opts_chunk$set(echo = FALSE)
 ## Preambulo
 Este documento fue elaborado con **rmarkdown_2.1** y compilado con **knitr_1.28** en **RStudio Desktop 1.2.5033 "Orange Blossom"**.
 
+Los enlaces están actualizados al **`r Sys.Date()`**.
+
 ## Introducción
-Si acabas de instalar Ubuntu y necesitas tener listo RStudio para comenzar a trabajar, echale un ojo a esta pequeña guía para que no des tantas vueltas en la web :heart:.
+Si acabas de instalar **Ubuntu 18.04 LTS** y necesitas tener listo RStudio para comenzar a trabajar, utiliza esta pequeña guía para que no des tantas vueltas en la web :heart:.
 
 ## Instalando R {.tabset}
 ### R 3.6
@@ -29,8 +31,6 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD
 sudo apt-get update
 sudo apt-get install r-base r-base-dev
 ```
-
-
 ### R 4.0
 
 ```bash
@@ -42,11 +42,10 @@ sudo apt-get update
 sudo apt-get install r-base r-base-dev
 ```
 
-## Instalando RStudio
+## Instalando RStudio Desktop
 Las siguientes lineas de código instalaran RStudio .... .... en tu OS.
 
 ```bash
 curl -O ~/Downloads/rstudio url
 sudo dpkg -i ~/Downloads/rstuidio url
 ```
-
