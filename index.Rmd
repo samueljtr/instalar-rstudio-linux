@@ -18,9 +18,9 @@ Este documento fue elaborado con **rmarkdown_2.1** y compilado con **knitr_1.28*
 Los enlaces están actualizados al **`r Sys.Date()`**.
 
 ## Introducción
-Si acabas de instalar **Ubuntu 18.04 LTS** y necesitas tener listo RStudio para comenzar a trabajar, utiliza esta pequeña guía para que no des tantas vueltas en la web :heart:.
+Si acabas de instalar **Ubuntu 18.04 LTS** y necesitas tener listo RStudio para comenzar a trabajar, utiliza esta pequeña guía para que no des tantas vueltas en la web. Sólo tienes que ejecutar linea a linea los bloques de código que te mostraré a continuación y en poco tiempo ya tendrás todo el software instalado.
 
-## Instalando R {.tabset}
+## Instalando R {.tabset .tabset-fade}
 ### R 3.6
 
 ```bash
@@ -41,11 +41,22 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD
 sudo apt-get update
 sudo apt-get install r-base r-base-dev
 ```
+#
+Verifica que la instalación se realizó correctamente ejecutando `R --version` en el terminal.
 
 ## Instalando RStudio Desktop
-Las siguientes lineas de código instalaran RStudio .... .... en tu OS.
+Las siguientes lineas de código instalaran RStudio Desktop 1.2.5042 en tu OS.
 
 ```bash
-curl -O ~/Downloads/rstudio url
-sudo dpkg -i ~/Downloads/rstuidio url
+# El primer comando es importante para que el paquete descargado quede en un lugar conocido
+cd ~/Downloads
+nombre_archivo="rstudio-1.2.5042-amd64.deb"
+URL="https://download1.rstudio.org/desktop/bionic/amd64/$nombre_archivo"
+wget -nv --show-progress $URL
+
+sudo chmod +x "$nombre_archivo"
+sudo dpkg -i "$nombre_archivo"
 ```
+
+### ¡ATENCIÓN! 
+Si detienes la descarga, un archivo con el nombre "rstudio-1.2.5042-amd64.deb" se creará en el directorio de trabajo actual (~/Downloads). Esto puede llegar a confundirte ya que la próxima vez que intentes descargar el paquete, este se guardará como "rstudio-1.2.5042-amd64.deb**1**" para evitar conflicto con el archivo que ya existe.

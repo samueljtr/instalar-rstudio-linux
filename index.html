@@ -223,42 +223,46 @@ pre.numberSource a.sourceLine::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
+    background-color: #ffffff;
+    color: #a0a0a0;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #a0a0a0;  padding-left: 4px; }
 div.sourceCode
-  { background-color: #f8f8f8; }
+  { color: #1f1c1b; background-color: #ffffff; }
 @media screen {
 a.sourceLine::before { text-decoration: underline; }
 }
-code span.al { color: #ef2929; } /* Alert */
-code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #c4a000; } /* Attribute */
-code span.bn { color: #0000cf; } /* BaseN */
-code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4e9a06; } /* Char */
-code span.cn { color: #000000; } /* Constant */
-code span.co { color: #8f5902; font-style: italic; } /* Comment */
-code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
-code span.dt { color: #204a87; } /* DataType */
-code span.dv { color: #0000cf; } /* DecVal */
-code span.er { color: #a40000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #0000cf; } /* Float */
-code span.fu { color: #000000; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
-code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
-code span.ot { color: #8f5902; } /* Other */
-code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
-code span.sc { color: #000000; } /* SpecialChar */
-code span.ss { color: #4e9a06; } /* SpecialString */
-code span.st { color: #4e9a06; } /* String */
-code span.va { color: #000000; } /* Variable */
-code span.vs { color: #4e9a06; } /* VerbatimString */
-code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+code span. { color: #1f1c1b; } /* Normal */
+code span.al { color: #bf0303; background-color: #f7e6e6; font-weight: bold; } /* Alert */
+code span.an { color: #ca60ca; } /* Annotation */
+code span.at { color: #0057ae; } /* Attribute */
+code span.bn { color: #b08000; } /* BaseN */
+code span.bu { color: #644a9b; font-weight: bold; } /* BuiltIn */
+code span.cf { color: #1f1c1b; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #924c9d; } /* Char */
+code span.cn { color: #aa5500; } /* Constant */
+code span.co { color: #898887; } /* Comment */
+code span.cv { color: #0095ff; } /* CommentVar */
+code span.do { color: #607880; } /* Documentation */
+code span.dt { color: #0057ae; } /* DataType */
+code span.dv { color: #b08000; } /* DecVal */
+code span.er { color: #bf0303; text-decoration: underline; } /* Error */
+code span.ex { color: #0095ff; font-weight: bold; } /* Extension */
+code span.fl { color: #b08000; } /* Float */
+code span.fu { color: #644a9b; } /* Function */
+code span.im { color: #ff5500; } /* Import */
+code span.in { color: #b08000; } /* Information */
+code span.kw { color: #1f1c1b; font-weight: bold; } /* Keyword */
+code span.op { color: #1f1c1b; } /* Operator */
+code span.ot { color: #006e28; } /* Other */
+code span.pp { color: #006e28; } /* Preprocessor */
+code span.re { color: #0057ae; background-color: #e0e9f8; } /* RegionMarker */
+code span.sc { color: #3daee9; } /* SpecialChar */
+code span.ss { color: #ff5500; } /* SpecialString */
+code span.st { color: #bf0303; } /* String */
+code span.va { color: #0057ae; } /* Variable */
+code span.vs { color: #bf0303; } /* VerbatimString */
+code span.wa { color: #bf0303; } /* Warning */
 
 </style>
 <script>
@@ -438,9 +442,9 @@ summary {
 </div>
 <div id="introducción" class="section level2">
 <h2>Introducción</h2>
-<p>Si acabas de instalar <strong>Ubuntu 18.04 LTS</strong> y necesitas tener listo RStudio para comenzar a trabajar, utiliza esta pequeña guía para que no des tantas vueltas en la web :heart:.</p>
+<p>Si acabas de instalar <strong>Ubuntu 18.04 LTS</strong> y necesitas tener listo RStudio para comenzar a trabajar, utiliza esta pequeña guía para que no des tantas vueltas en la web. Sólo tienes que ejecutar linea a linea los bloques de código que te mostraré a continuación y en poco tiempo ya tendrás todo el software instalado.</p>
 </div>
-<div id="instalando-r" class="section level2 tabset">
+<div id="instalando-r" class="section level2 tabset tabset-fade">
 <h2>Instalando R</h2>
 <div id="r-3.6" class="section level3">
 <h3>R 3.6</h3>
@@ -461,11 +465,25 @@ summary {
 <a class="sourceLine" id="cb2-6" data-line-number="6"><span class="fu">sudo</span> apt-get install r-base r-base-dev</a></code></pre></div>
 </div>
 </div>
+<div id="section" class="section level1">
+<h1></h1>
+<p>Verifica que la instalación se realizó correctamente ejecutando <code>R --version</code> en el terminal.</p>
 <div id="instalando-rstudio-desktop" class="section level2">
 <h2>Instalando RStudio Desktop</h2>
-<p>Las siguientes lineas de código instalaran RStudio …. …. en tu OS.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="ex">curl</span> -O ~/Downloads/rstudio url</a>
-<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="fu">sudo</span> dpkg -i ~/Downloads/rstuidio url</a></code></pre></div>
+<p>Las siguientes lineas de código instalaran RStudio Desktop 1.2.5042 en tu OS.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="co"># El primer comando es importante para que el paquete descargado quede en un lugar conocido</span></a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="bu">cd</span> ~/Downloads</a>
+<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="va">nombre_archivo=</span><span class="st">&quot;rstudio-1.2.5042-amd64.deb&quot;</span></a>
+<a class="sourceLine" id="cb3-4" data-line-number="4"><span class="va">URL=</span><span class="st">&quot;https://download1.rstudio.org/desktop/bionic/amd64/</span><span class="va">$nombre_archivo</span><span class="st">&quot;</span></a>
+<a class="sourceLine" id="cb3-5" data-line-number="5"><span class="fu">wget</span> -nv --show-progress <span class="va">$URL</span></a>
+<a class="sourceLine" id="cb3-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb3-7" data-line-number="7"><span class="fu">sudo</span> chmod +x <span class="st">&quot;</span><span class="va">$nombre_archivo</span><span class="st">&quot;</span></a>
+<a class="sourceLine" id="cb3-8" data-line-number="8"><span class="fu">sudo</span> dpkg -i <span class="st">&quot;</span><span class="va">$nombre_archivo</span><span class="st">&quot;</span></a></code></pre></div>
+<div id="atención" class="section level3">
+<h3>¡ATENCIÓN!</h3>
+<p>Si detienes la descarga, un archivo con el nombre “rstudio-1.2.5042-amd64.deb” se creará en el directorio de trabajo actual (~/Downloads). Esto puede llegar a confundirte ya que la próxima vez que intentes descargar el paquete, este se guardará como “rstudio-1.2.5042-amd64.deb<strong>1</strong>” para evitar conflicto con el archivo que ya existe.</p>
+</div>
+</div>
 </div>
 
 
