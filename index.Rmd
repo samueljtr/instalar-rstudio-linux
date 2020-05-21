@@ -5,7 +5,7 @@ date: "5/19/2020"
 output: 
   html_document:
     theme: united  
-    highlight: tango
+    highlight: kate 
 ---
 
 ```{r setup, include=FALSE}
